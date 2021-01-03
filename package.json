@@ -1,5 +1,5 @@
 {
-  "name": "cu-utils",
+  "name": "cu-personal-utils",
   "version": "0.0.1",
   "description": "A CLI tool to perform several operations with CU API",
   "main": "src/cli/index.ts",
