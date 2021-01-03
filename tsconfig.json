@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "lib": ["es5", "es6"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "outDir": "./build",
+    "target": "es2017",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "resolveJsonModule": true
+  }
+}
