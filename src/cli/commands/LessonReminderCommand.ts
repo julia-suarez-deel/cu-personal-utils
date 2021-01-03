@@ -3,7 +3,7 @@ import LessonService from "@/services/LessonService";
 
 function getDefaultLessonDate(): Date {
   const date = new Date();
-  date.setHours(14, 0, 0, 0);
+  date.setHours(19, 0, 0, 0);
   return date;
 }
 
