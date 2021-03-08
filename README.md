@@ -5,7 +5,6 @@ A platzi lesson says you can remember your lessons (courses or anything you want
 ### Steps
 1. `npm install`
 1. Copy the `.env.example` to `.env` and fill the variables:
-    1. `USER_ID`: The user id in ClickUp, used to auto assign each task/subtask
     1. `LESSON_LIST_ID`: The ClickUp list where the task will be placed
     1. `CLICK_UP_TOKEN`: The ClickUp API token for your personal account, this is used to talk to the ClickUp api, you can get one by going to `Settings > My Apps > Apps > API Token` in the ClickUp app.
 
@@ -13,5 +12,3 @@ A platzi lesson says you can remember your lessons (courses or anything you want
 1. You will get something like this
 
 ![demo](src/img/screenshot.png)
-
-#### Note: Some custom fields are pre-filled according to my personal settings, this tool is not ready to be used out of the box by everyone, since the code needs to be refactored in order to be more generic

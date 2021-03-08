@@ -9,23 +9,26 @@ function getDefaultLessonDate(): Date {
 
 export class LessonReminderCommand implements yargs.CommandModule {
   command = "lesson:create";
-  describe = "Creates a ClickUp task with a subtasks for review the knowledge acquired for 1 day, 1 week and 1 month afterward";
+  describe =
+    "Creates a ClickUp task with a subtasks for review the knowledge acquired for 1 day, 1 week and 1 month afterward";
 
   builder(args: yargs.Argv) {
     return args
       .option("n", {
         alias: "name",
         describe: "Name of the lesson",
-        demandOption: true
+        demandOption: true,
       })
       .option("date", {
-        describe: "Date of the lesson, from this date the due date of each review will be calculated to 1 day, 1 week and 1 month afterwards, by default today will be used at 3pm"
-      })
+        describe:
+          "Date of the lesson, from this date the due date of each review will be calculated to 1 day, 1 week and 1 month afterwards, by default today will be used at 3pm",
+      });
   }
 
-  async handler(args: yargs.Arguments) {
-    const {name, date} = args;
-    const parsedDate = date? new Date(date as string): getDefaultLessonDate();
+  async handler(args: yargs.Arguments): Promise<void> {
+    const { name, date } = args;
+    const parsedDate = date ? new Date(date as string) : getDefaultLessonDate();
     await LessonService.createLesson(name as string, parsedDate);
+    console.info("Success");
   }
 }
